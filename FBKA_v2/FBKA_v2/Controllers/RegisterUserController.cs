@@ -20,6 +20,9 @@ namespace FBKA_v2.Controllers
         public ActionResult ConfirmData(FormCollection form)
         {
             ViewBag.IdUser = form["IdUser"];
+            ViewBag.Nome = form["Nome"];
+            ViewBag.Email = form["Email"];
+
             return View();
         }
     }
