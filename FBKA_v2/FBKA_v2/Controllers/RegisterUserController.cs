@@ -15,12 +15,28 @@ namespace FBKA_v2.Controllers
 
             return View(user);
         }
-        
+
         [HttpPost]
-        public ActionResult ConfirmData(FormCollection form)
+        public ActionResult ConfirmData(ModUser user)
         {
-            ViewBag.IdUser = form["IdUser"];
-            return View();
+            //if (user.Name == null || user.IdUser <= 0)
+            //{
+            //    ModelState.AddModelError("IdUser", "Id inválido");
+            //}
+
+            //if (user.Name == null || user.Name.Trim().Length <= 0)
+            //{
+            //    ModelState.AddModelError("Name", "O Nome precisa ser preenchido");
+            //}
+
+
+            //valida o modelo em caso de alguém burlar o JS.
+            if (ModelState.IsValid == false)
+            {
+                return View("Register", user);
+            }
+            return View(user);
+
         }
     }
 }

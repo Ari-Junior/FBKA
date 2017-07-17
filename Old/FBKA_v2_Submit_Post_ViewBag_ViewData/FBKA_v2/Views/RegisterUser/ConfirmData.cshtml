@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "ConfirmData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>ConfirmData</h2>
+
+<fieldset>
+    <legend> Confirmar dados preenchidos!</legend>
+    <div>
+        <strong>Id do usuário: </strong>@ViewData["IdUser"]
+    </div>
+    <div>
+        <strong>Nome: </strong>@ViewData["Name"]
+    </div>
+    <div>
+        <strong>Email: </strong>@ViewData["Email"]
+    </div>
+</fieldset>
+

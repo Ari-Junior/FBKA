@@ -1,44 +1,52 @@
 ﻿@model FBKA_v2.Models.ModUser
 @{
-    ViewBag.Title = "UserRegister";
+    ViewBag.Title = "Cadastrar Usuário";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Register</h2>
-
 @using (Html.BeginForm("ConfirmData", "RegisterUser", null, FormMethod.Post))
 {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
     <Fielset>
         <legend>Cadastrar usuário</legend>
         <div>
-            @Html.LabelFor(model => Model.IdUser)
-        </div>
-        <div>
-            @Html.TextBoxFor(model => Model.IdUser)
-        </div>
-        
-        <div>
-            @Html.LabelFor(model => Model.Name)
-        </div>
-        <div>
-            @Html.TextBoxFor(model => Model.Name)
+            <div class="editor-label">
+                @Html.LabelFor(model => Model.IdUser)
+            </div>
+            <div class="editor-box">
+                @Html.TextBoxFor(model => Model.IdUser)
+            </div>
+            @Html.ValidationMessageFor(model => Model.IdUser)
         </div>
 
         <div>
-            @Html.LabelFor(model => Model.Email)
+            <div class="editor-label">
+                @Html.LabelFor(model => Model.Name)
+            </div>
+            <div class="editor-box">
+                @Html.TextBoxFor(model => Model.Name)
+            </div>
+            @Html.ValidationMessageFor(model => Model.Name)
         </div>
         <div>
-            @Html.TextBoxFor(model => Model.Email)
+            <div class="editor-label">
+                @Html.LabelFor(model => Model.Email)
+            </div>
+            <div class="editor-box">
+                @Html.TextBoxFor(model => Model.Email)
+            </div>
+            @Html.ValidationMessageFor(model => Model.Email)
         </div>
 
 
-
         <div>
-            <input type="submit" value="salvar"/>
+            <input type="submit" value="salvar" />
         </div>
     </Fielset>
 }
 
 
-
-    
+@section scripts{ <!--Mesmo nome dado no script da masterpage no final _Layout-->
+    @Scripts.Render("~/bundles/jqueryval")
+}

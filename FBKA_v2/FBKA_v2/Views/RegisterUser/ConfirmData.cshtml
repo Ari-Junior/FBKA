@@ -1,16 +1,21 @@
-﻿
+﻿@model FBKA_v2.Models.ModUser
 @{
-    ViewBag.Title = "ConfirmData";
+    ViewBag.Title = "Confirmar Dados";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
-<h2>ConfirmData</h2>
 
 <fieldset>
     <legend> Confirmar dados preenchidos!</legend>
     <div>
-        <strong>Id do usuário: </strong>@ViewBag.IdUser
+        <strong>@Html.LabelFor(model => Model.IdUser): </strong>@Html.DisplayFor(model => Model.IdUser) <!--Model.IdUser-->
     </div>
+    <div>
+        <strong>@Html.LabelFor(model => Model.Name): </strong>@Html.DisplayFor(model => Model.Name)
+    </div>
+    <div>
+        <strong>@Html.LabelFor(model => Model.Email): </strong>@Html.DisplayFor(model => Model.Email)
+    </div>
+
 </fieldset>
+
 
