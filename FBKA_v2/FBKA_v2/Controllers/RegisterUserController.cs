@@ -22,7 +22,7 @@ namespace FBKA_v2.Controllers
             ViewBag.IdUser = form["IdUser"];
             ViewBag.Nome = form["Nome"];
             ViewBag.Email = form["Email"];
-
+            errrrooo
             return View();
         }
     }
