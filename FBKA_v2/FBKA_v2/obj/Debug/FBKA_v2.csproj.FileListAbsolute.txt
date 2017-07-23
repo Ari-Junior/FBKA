@@ -143,6 +143,6 @@ C:\Users\arima\OneDrive\Documentos\Github_repository\FBKA\FBKA_v2\FBKA_v2\bin\pt
 C:\Users\arima\OneDrive\Documentos\Github_repository\FBKA\FBKA_v2\FBKA_v2\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\arima\OneDrive\Documentos\Github_repository\FBKA\FBKA_v2\FBKA_v2\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\arima\OneDrive\Documentos\Github_repository\FBKA\FBKA_v2\FBKA_v2\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\Users\arima\OneDrive\Documentos\Github_repository\FBKA\FBKA_v2\FBKA_v2\obj\Debug\FBKA_v2.csprojResolveAssemblyReference.cache
 C:\Users\arima\OneDrive\Documentos\Github_repository\FBKA\FBKA_v2\FBKA_v2\obj\Debug\FBKA_v2.dll
 C:\Users\arima\OneDrive\Documentos\Github_repository\FBKA\FBKA_v2\FBKA_v2\obj\Debug\FBKA_v2.pdb
+C:\Users\arima\OneDrive\Documentos\Github_repository\FBKA\FBKA_v2\FBKA_v2\obj\Debug\FBKA_v2.csprojResolveAssemblyReference.cache

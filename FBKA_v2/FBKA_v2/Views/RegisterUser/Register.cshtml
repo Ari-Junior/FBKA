@@ -15,7 +15,7 @@
                 @Html.LabelFor(model => Model.IdUser)
             </div>
             <div class="editor-box">
-                @Html.TextBoxFor(model => Model.IdUser)
+                @Html.TextBoxFor(model => Model.IdUser, new { Class = "integer" })
             </div>
             @Html.ValidationMessageFor(model => Model.IdUser)
         </div>
@@ -39,6 +39,27 @@
             @Html.ValidationMessageFor(model => Model.Email)
         </div>
 
+        <div>
+            <div class="editor-label">
+                @Html.LabelFor(model => Model.DtCadastro)
+            </div>
+            <div class="editor-box">
+                @Html.TextBoxFor(model => Model.DtCadastro, new { Class = "date" })
+            </div>
+            @Html.ValidationMessageFor(model => Model.DtCadastro)
+        </div>
+
+        <div>
+            <div class="editor-label">
+                @Html.LabelFor(model => Model.ValorEtapa)
+            </div>
+            <div class="editor-box">
+                @Html.TextBoxFor(model => Model.ValorEtapa, new { Class = "money2" })
+            </div>
+            @Html.ValidationMessageFor(model => Model.ValorEtapa)
+        </div>
+
+
 
         <div>
             <input type="submit" value="salvar" />
@@ -47,6 +68,9 @@
 }
 
 
-@section scripts{ <!--Mesmo nome dado no script da masterpage no final _Layout-->
+<!--Mesmo nome dado no script da masterpage no final _Layout-->
+@section scripts
+{
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/Masks")
 }
