@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace FBKA_v2.Models
 {
@@ -16,7 +17,8 @@ namespace FBKA_v2.Models
 
         [Display(Name = "Nome Completo")]
         [Required(ErrorMessage = "Campo nome obrigatório")]
-        [StringLength(50, MinimumLength = 4, ErrorMessage = "Campo Nome deve ter entre 4 e 50 caracteres")]
+        //[StringLength(50, MinimumLength = 3, ErrorMessage = "Campo Nome deve ter entre 3 e 50 caracteres")]
+        [Remote("ValidNames", "RegisterUser", ErrorMessage = "Nome Já cadastrado!", AdditionalFields = "IdUser")]
         public String Name { get; set; }
 
         [Display(Name = "Email para cadastro")]
