@@ -5,6 +5,7 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
+
 namespace FBKA_v2.Models
 {
     public class ModUser
@@ -22,7 +23,8 @@ namespace FBKA_v2.Models
         public String Name { get; set; }
 
         [Display(Name = "Email para cadastro")]
-        [RegularExpression(@"^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*\s+<(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})>$|^(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})$", ErrorMessage = "Formato do E-mail Inválido")]
+        //[RegularExpression(@"^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*\s+<(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})>$|^(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})$", ErrorMessage = "Formato do E-mail Inválido")]
+        [EmailBrasil(ErrorMessage = "Email inválido", EmailRequerido = true)]
         [Required(ErrorMessage = "Campo email obrigatório")]
         public String Email { get; set; }
 
@@ -37,8 +39,13 @@ namespace FBKA_v2.Models
         [NumeroBrasil(ErrorMessage = "Valor está inválido!", PontoMilharPermitido = true, DecimalRequerido = true)]
         public double? ValorEtapa { get; set; }
 
+        [Display(Name = "Senha")]
+        [SenhaBrasil(SenhaTamanhoMinimo = 6, SenhaTamanhoMaximo = 8, SenhaForteRequerida =true, CaracterEspecialRequerido = false)]
+        public string Password { get; set; }
 
-
+        [Display(Name = "Confirmar Senha")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Senhas digitadas não conferem.")]
+        public string ConfirmPassword { get; set; }
 
     }
 }

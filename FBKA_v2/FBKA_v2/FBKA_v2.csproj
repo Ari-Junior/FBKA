@@ -149,8 +149,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ModUser.cs" />
+    <Compile Include="Models\Validacoes\EmailBrasilAttribute.cs" />
     <Compile Include="Models\Validacoes\CustomModelBinder.cs" />
     <Compile Include="Models\Validacoes\DataBrasilAttribute.cs" />
+    <Compile Include="Models\Validacoes\SenhaBrasilAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Validacoes\NumeroBrasilAttribute.cs" />
   </ItemGroup>

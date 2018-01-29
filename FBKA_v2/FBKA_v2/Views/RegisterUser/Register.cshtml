@@ -8,63 +8,84 @@
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-    <Fielset>
-        <legend>Cadastrar usuário</legend>
-        <div>
-            <div class="editor-label">
-                @Html.LabelFor(model => Model.IdUser)
-            </div>
-            <div class="editor-box">
-                @Html.TextBoxFor(model => Model.IdUser, new { Class = "integer" })
-            </div>
-            @Html.ValidationMessageFor(model => Model.IdUser)
+<Fielset>
+    <legend>Cadastrar usuário</legend>
+    <div>
+        <div class="editor-label">
+            @Html.LabelFor(model => Model.IdUser)
         </div>
-
-        <div>
-            <div class="editor-label">
-                @Html.LabelFor(model => Model.Name)
-            </div>
-            <div class="editor-box">
-                @Html.TextBoxFor(model => Model.Name)
-            </div>
-            @Html.ValidationMessageFor(model => Model.Name)
+        <div class="editor-box">
+            @Html.TextBoxFor(model => Model.IdUser, new { Class = "integer" })
         </div>
-        <div>
-            <div class="editor-label">
-                @Html.LabelFor(model => Model.Email)
-            </div>
-            <div class="editor-box">
-                @Html.TextBoxFor(model => Model.Email)
-            </div>
-            @Html.ValidationMessageFor(model => Model.Email)
+        @Html.ValidationMessageFor(model => Model.IdUser)
+    </div>
+
+    <div>
+        <div class="editor-label">
+            @Html.LabelFor(model => Model.Name)
         </div>
-
-        <div>
-            <div class="editor-label">
-                @Html.LabelFor(model => Model.DtCadastro)
-            </div>
-            <div class="editor-box">
-                @Html.TextBoxFor(model => Model.DtCadastro, new { Class = "date" })
-            </div>
-            @Html.ValidationMessageFor(model => Model.DtCadastro)
+        <div class="editor-box">
+            @Html.TextBoxFor(model => Model.Name)
         </div>
-
-        <div>
-            <div class="editor-label">
-                @Html.LabelFor(model => Model.ValorEtapa)
-            </div>
-            <div class="editor-box">
-                @Html.TextBoxFor(model => Model.ValorEtapa, new { Class = "money2" })
-            </div>
-            @Html.ValidationMessageFor(model => Model.ValorEtapa)
+        @Html.ValidationMessageFor(model => Model.Name)
+    </div>
+    <div>
+        <div class="editor-label">
+            @Html.LabelFor(model => Model.Email)
         </div>
-
-
-
-        <div>
-            <input type="submit" value="salvar" />
+        <div class="editor-box">
+            @Html.TextBoxFor(model => Model.Email)
         </div>
-    </Fielset>
+        @Html.ValidationMessageFor(model => Model.Email)
+    </div>
+
+    <div>
+        <div class="editor-label">
+            @Html.LabelFor(model => Model.DtCadastro)
+        </div>
+        <div class="editor-box">
+            @Html.TextBoxFor(model => Model.DtCadastro, new { Class = "date" })
+        </div>
+        @Html.ValidationMessageFor(model => Model.DtCadastro)
+    </div>
+
+    <div>
+        <div class="editor-label">
+            @Html.LabelFor(model => Model.ValorEtapa)
+        </div>
+        <div class="editor-box">
+            @Html.TextBoxFor(model => Model.ValorEtapa, new { Class = "money2" })
+        </div>
+        @Html.ValidationMessageFor(model => Model.ValorEtapa)
+    </div>
+
+
+    <div>
+        <div class="editor-label">
+            @Html.LabelFor(model => Model.Password)
+        </div>
+        <div class="editor-box">
+            @Html.PasswordFor(model => Model.Password)
+        </div>
+        @Html.ValidationMessageFor(model => Model.Password)
+    </div>
+
+    <div>
+        <div class="editor-label">
+            @Html.LabelFor(model => Model.ConfirmPassword)
+        </div>
+        <div class="editor-box">
+            @Html.PasswordFor(model => Model.ConfirmPassword)
+        </div>
+        @Html.ValidationMessageFor(model => Model.ConfirmPassword)
+    </div>
+
+
+
+    <div>
+        <input type="submit" value="salvar" />
+    </div>
+</Fielset>
 }
 
 
